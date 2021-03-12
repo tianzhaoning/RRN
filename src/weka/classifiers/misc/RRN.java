@@ -41,7 +41,7 @@ import weka.core.converters.ArffLoader;
 import weka.core.converters.CSVLoader;
 import MN.*;
 
-public class RMN extends SingleClassifierEnhancer implements OptionHandler, WeightedInstancesHandler {
+public class RRN extends SingleClassifierEnhancer implements OptionHandler, WeightedInstancesHandler {
 
 	/**
 	 * a ZeroR model in case no model can be built from the data or the network
@@ -152,7 +152,7 @@ public class RMN extends SingleClassifierEnhancer implements OptionHandler, Weig
 	/**
 	 * Constructor.
 	 */
-	public RMN() {
+	public RRN() {
 	}
 
 	/**
@@ -1127,7 +1127,7 @@ public class RMN extends SingleClassifierEnhancer implements OptionHandler, Weig
 	public static void main(String[] argv) {
 		System.out.println("我正在执行MN算法");
 		try {
-			System.out.println(Evaluation.evaluateModel(new RMN(), argv));
+			System.out.println(Evaluation.evaluateModel(new RRN(), argv));
 			
 		} catch (Exception e) {
 			e.printStackTrace();
